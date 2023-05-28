@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="887.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Form.Sign_up">
+   <top>
+      <HBox prefHeight="60.0" prefWidth="887.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" prefHeight="60.0" prefWidth="892.0" style="-fx-background-color: #0fea88;" text="Sign up">
+               <font>
+                  <Font name="Lato Bold" size="47.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <VBox alignment="TOP_CENTER" prefHeight="540.0" prefWidth="398.0" style="-fx-background-color: #28252e;" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="341.0" prefWidth="389.0" style="-fx-background-color: #28252e;">
+               <children>
+                  <ImageView fx:id="imageView" fitHeight="187.0" fitWidth="193.0" layoutX="90.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button alignment="CENTER" layoutX="135.0" layoutY="281.0" mnemonicParsing="false" onAction="#handleButtonClick" prefHeight="39.0" prefWidth="104.0" text="Add photo" />
+                  <Circle fx:id="circle" fill="WHITE" layoutX="187.0" layoutY="167.0" radius="88.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="2.0" />
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox prefHeight="525.0" prefWidth="509.0" style="-fx-background-color: #28252e;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="40.0" prefWidth="1514.0" spacing="10.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="209.0" text="Name:" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Label>
+                  <TextField fx:id="nameTextField" onKeyTyped="#validateName" />
+               </children>
+               <VBox.margin>
+                  <Insets top="100.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="140.0" prefHeight="40.0" prefWidth="1514.0" spacing="10.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="209.0" text="email:" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Label>
+                  <TextField fx:id="emailTextField" onKeyTyped="#validateEmail" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="171.0" prefHeight="40.0" prefWidth="1514.0" spacing="10.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="209.0" text="password:" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Label>
+                  <PasswordField fx:id="passwordField" onKeyTyped="#Pass" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="201.0" prefHeight="40.0" prefWidth="1514.0" spacing="10.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="209.0" text="address:" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Label>
+                  <TextField fx:id="addressTextField" onKeyTyped="#validateAddress" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="232.0" prefHeight="40.0" prefWidth="1514.0" spacing="10.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="209.0" text="phone number:" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Label>
+                  <TextField fx:id="phoneNumberTextField" onKeyTyped="#validatePhoneNum" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="262.0" prefHeight="40.0" prefWidth="1514.0" spacing="10.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="209.0" text="dateofbirth:" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Label>
+                  <DatePicker fx:id="dateTextField" onKeyTyped="#Birth" prefHeight="26.0" prefWidth="149.0" promptText="dd/mm/yyyy" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="292.0" prefHeight="40.0" prefWidth="1514.0" spacing="10.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="209.0" text="User type:" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Label>
+                  <ChoiceBox fx:id="myChoiceBox" prefWidth="150.0" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="323.0" prefHeight="30.0" prefWidth="1514.0" spacing="10.0" />
+            <Button fx:id="closeButton" mnemonicParsing="false" onAction="#closeForm" prefHeight="31.0" prefWidth="90.0" style="-fx-background-color: #0fea88;" text="Done">
+               <VBox.margin>
+                  <Insets right="20.0" top="30.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
