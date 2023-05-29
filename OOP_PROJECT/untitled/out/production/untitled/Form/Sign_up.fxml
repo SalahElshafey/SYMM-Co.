@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="887.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Form.Sign_up">
+   <top>
+      <HBox alignment="CENTER" prefHeight="90.0" prefWidth="887.0" style="-fx-background-color: #2f2f2f;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fx:id="image" fitHeight="63.0" fitWidth="171.0" onMouseEntered="#handleMouseEntered1" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logo.png" />
+               </image></ImageView>
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <VBox alignment="TOP_CENTER" prefHeight="520.0" prefWidth="390.0" style="-fx-background-color: FF4C23;" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="341.0" prefWidth="389.0" style="-fx-background-color: FF4C23;">
+               <children>
+                  <ImageView fx:id="imageView" fitHeight="187.0" fitWidth="193.0" layoutX="90.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true" />
+                  <Button alignment="CENTER" layoutX="126.0" layoutY="274.0" mnemonicParsing="false" onAction="#handleButtonClick" onMouseEntered="#startShake_button" prefHeight="40.0" prefWidth="122.0" style="-fx-background-color: #2f2f2f; -fx-background-radius: 25;" text="Add photo" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Button>
+                  <Circle fx:id="circle" fill="WHITE" layoutX="187.0" layoutY="167.0" radius="88.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="2.0" />
+               </children>
+            </Pane>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox prefHeight="520.0" prefWidth="502.0" style="-fx-background-color: FF4C23;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="40.0" prefWidth="1514.0" spacing="10.0">
+               <children>
+                  <TextField fx:id="nameTextField" onKeyTyped="#validateName" onMouseEntered="#startShake_text" prefHeight="26.0" prefWidth="310.0" promptText="Name" style="-fx-background-radius: 25;" />
+               </children>
+               <VBox.margin>
+                  <Insets left="50.0" top="100.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="140.0" prefHeight="40.0" prefWidth="1514.0" spacing="10.0">
+               <children>
+                  <TextField fx:id="emailTextField" onKeyTyped="#validateEmail" onMouseEntered="#startShake_text" prefHeight="26.0" prefWidth="310.0" promptText="email" style="-fx-background-radius: 25;">
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin></TextField>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="171.0" prefHeight="40.0" prefWidth="1514.0" spacing="10.0">
+               <children>
+                  <PasswordField fx:id="passwordField" onKeyTyped="#Pass" onMouseEntered="#startShake_text" prefHeight="26.0" prefWidth="310.0" promptText="password" style="-fx-background-radius: 25;">
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin></PasswordField>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="201.0" prefHeight="40.0" prefWidth="1514.0" spacing="10.0">
+               <children>
+                  <TextField fx:id="addressTextField" onKeyTyped="#validateAddress" onMouseEntered="#startShake_text" prefHeight="26.0" prefWidth="310.0" promptText="address" style="-fx-background-radius: 25;">
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin></TextField>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="232.0" prefHeight="40.0" prefWidth="1514.0" spacing="10.0">
+               <children>
+                  <TextField fx:id="phoneNumberTextField" onKeyTyped="#validatePhoneNum" onMouseEntered="#startShake_text" prefHeight="26.0" prefWidth="310.0" promptText="phone number" style="-fx-background-radius: 25;">
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin></TextField>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="262.0" prefHeight="40.0" prefWidth="1514.0" spacing="10.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefHeight="22.0" prefWidth="80.0" text="dateofbirth:" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="50.0" />
+                     </HBox.margin></Label>
+                  <DatePicker fx:id="dateTextField" onKeyTyped="#Birth" prefHeight="26.0" prefWidth="149.0" promptText="dd/mm/yyyy" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="292.0" prefHeight="40.0" prefWidth="1514.0" spacing="10.0">
+               <children>
+                  <Label alignment="CENTER_RIGHT" prefHeight="22.0" prefWidth="68.0" text="User type:" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Label>
+                  <ChoiceBox fx:id="myChoiceBox" prefWidth="150.0" />
+               </children>
+               <VBox.margin>
+                  <Insets left="50.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="323.0" prefHeight="30.0" prefWidth="1514.0" spacing="10.0" />
+            <Button fx:id="closeButton" mnemonicParsing="false" onAction="#closeForm" onMouseEntered="#startShake_button" prefHeight="43.0" prefWidth="106.0" style="-fx-background-color: #2f2f2f; -fx-background-radius: 25;" text="Sign up" textFill="WHITE">
+               <VBox.margin>
+                  <Insets right="20.0" top="30.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
